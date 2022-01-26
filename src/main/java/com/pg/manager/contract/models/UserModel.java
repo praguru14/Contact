@@ -1,7 +1,13 @@
 package com.pg.manager.contract.models;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Getter
+@Setter
 @Entity
 @Table(name="USER")
 public class UserModel {
@@ -17,5 +23,6 @@ public class UserModel {
     private String imageUrl;
     private String about;
     private boolean enabled;
-
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<ContactDetailModel> contacts;
 }
