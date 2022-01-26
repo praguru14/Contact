@@ -1,0 +1,21 @@
+package com.pg.manager.contract.models;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="USER")
+public class UserModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String name;
+    @Column(unique = true)
+    private String email;
+    private String password;
+    private String role;
+    private String imageUrl;
+    private String about;
+    private boolean enabled;
+
+}
