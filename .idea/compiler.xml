@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="contract" />
         <module name="contact" />
+        <module name="Contact" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Contact" options="-parameters" />
       <module name="contact" options="-parameters" />
       <module name="contract" options="-parameters" />
     </option>
