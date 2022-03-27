@@ -1,0 +1,16 @@
+<button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allNewServers"> Primary button</button>
+{{serverCreationStatus}}
+<!-- <input type="text" class="form-control" (input)="onUpdateScreen($event)"> 
+
+<input type="text" class="form-control" [(ngModel)]="serverName">
+{{serverName}} -->
+
+<input type="text" class="form-control" [(ngModel)]="username">
+<br>
+<div class="text-center">
+    <p>{{username}}</p>
+
+    <button class="btn btn-primary" [disabled]="!username">Empty</button>
+    <button class="btn btn-secondary" (click)="usernameEmpty()">Username Empty</button>
+</div>
+
